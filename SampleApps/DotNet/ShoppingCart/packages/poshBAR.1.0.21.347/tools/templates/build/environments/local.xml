@@ -1,0 +1,44 @@
+<environmentSettings>
+    <debug>true</debug>
+    <environment>local</environment>
+    <webSites>
+        <[project]>
+            <physicalPathRoot>c:\inetpub</physicalPathRoot>
+            <physicalFolderPrefix>[project]</physicalFolderPrefix>
+            <bindings>
+                <protocol>http</protocol>
+                <port>80</port>
+                <hostName>local.[project].com</hostName>
+            </bindings>
+            <bindings>
+                <protocol>https</protocol>
+                <port>443</port>
+                <hostName>local.[project].com</hostName>
+            </bindings>
+            <siteName>local.[project].com</siteName>
+            <appPath>/</appPath>
+            <!-- valid IIS Security Authentication types are: [anonymousAuthentication, basicAuthentication, clientCertificateMappingAuthentication, 
+                                                               digestAuthentication, iisClientCertificateMappingAuthentication, windowsAuthentication]-->
+            <iisAuthenticationTypes>anonymousAuthentication</iisAuthenticationTypes>
+            <appPool>
+                <name>[project]</name>
+                <!-- valid identityTypes are: [LocalSystem, LocalService, NetworkService, SpecificUser, ApplicationPoolIdentity] -->
+                <identityType>NetworkService</identityType>
+                <!-- Set this value to the User the Service will run under in the format DOMAIN\username -->
+                <!-- If Running as 'NetworkService' then 'NT AUTHORITY\Network Service' is used -->
+                <userName>NT AUTHORITY\Network Service</userName>
+                <!-- Leave blank unless using SpecificUser -->
+                <password></password>
+                <!-- how long to wait as a TimeSpan-->
+                <idleTimeout>00:20:00</idleTimeout>
+                <maxWorkerProcesses>1</maxWorkerProcesses>
+            </appPool>
+        </[project]>
+    </webSites>
+
+    <databases>
+        <[project]>
+            <connectionString>Server=myServerAddress;Database=[project];Trusted_Connection=True;</connectionString>
+        </[project]>
+    </databases>
+</environmentSettings>

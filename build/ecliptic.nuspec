@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Ecliptic</id>
+    <version>0.0.0.1</version>
+    <title>ExCeL to gherkIn ProgrammaTIC Utility</title>
+    <description>Ecliptic takes you from Excel files (MyStory.feature.xlsx) into Gherkin (MyStory.feature). From there it is easier for developers to maintain and instrument into the application or system.</description>
+    <summary>Ecliptic</summary>
+    <tags>Gherkin Excel Ecliptic BDD</tags>
+    <authors>Greg Cook, Jonathan McCracken, Troy Gould, Neil Whaley</authors>
+    <owners>Apache</owners>
+    <projectUrl>https://github.com/jmccracken/ecliptic</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Ecliptic is licensed uner Apache 2.0 (see LICENSE.txt). It includes a distribution of Specflow components which are licensed under BSD.</copyright>
+  </metadata>
+  <files>
+    <file src="..\build-artifacts\output\Ecliptic.exe" target="tools"/>
+    <file src="..\build-artifacts\output\GenerateSpecflow.bat" target="tools"/>  
+    <file src="..\build-artifacts\output\install.ps1" target="tools"/>  
+    <file src="..\build-artifacts\output\specFlow.exe" target="tools"/>
+
+    <file src="..\build-artifacts\output\EclipticLib.dll" target="tools"/>   
+    <file src="..\build-artifacts\output\EPPlus.dll" target="tools"/>
+    <file src="..\build-artifacts\output\Gherkin.dll" target="tools" />    
+    <file src="..\build-artifacts\output\IKVM*.dll" target="tools" />       
+    <file src="..\build-artifacts\output\TechTalk.SpecFlow.*.dll" target="tools" />    
+  </files>
+</package>

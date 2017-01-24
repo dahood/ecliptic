@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7F4631C-3D21-40C1-A560-FD9652A42B5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EclipticLib</RootNamespace>
+    <AssemblyName>EclipticLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\packages\EPPlus.4.0.4\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\..\packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\..\packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\..\packages\NUnit.Runners.2.6.4\tools\lib\nunit.util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Excel\EpplusExcelReader.cs" />
+    <Compile Include="Excel\IExcelReader.cs" />
+    <Compile Include="Extensions\DataTableExtensions.cs" />
+    <Compile Include="Extensions\DirectoryInfoExtensions.cs" />
+    <Compile Include="Generation\Domain\EclipticKeyword.cs" />
+    <Compile Include="Generation\Domain\Feature.cs" />
+    <Compile Include="Generation\Domain\Gherkin\GherkinColumn.cs" />
+    <Compile Include="Generation\Domain\Gherkin\GherkinRow.cs" />
+    <Compile Include="Generation\Domain\Gherkin\GherkinTable.cs" />
+    <Compile Include="Generation\Domain\Gherkin\GherkinKeyword.cs" />
+    <Compile Include="Generation\Domain\SetupFeature.cs" />
+    <Compile Include="Generation\Domain\Statement.cs" />
+    <Compile Include="Generation\Domain\TranslatedItem.cs" />
+    <Compile Include="Generation\EclipticControl.cs" />
+    <Compile Include="Generation\EclipticFileFilter.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\XmlExtensions.cs" />
+    <Compile Include="Generation\GherkinParsers\ExcelFeatureParser.cs" />
+    <Compile Include="Generation\GherkinParsers\BackgroundParser.cs" />
+    <Compile Include="Generation\GherkinParsers\BasicParser.cs" />
+    <Compile Include="Generation\GherkinParsers\FeatureParser.cs" />
+    <Compile Include="Generation\GherkinParsers\FeatureParserFactory.cs" />
+    <Compile Include="Generation\GherkinParsers\IgnoreParser.cs" />
+    <Compile Include="Exceptions\SummaryParseException.cs" />
+    <Compile Include="Generation\GherkinParsers\SummaryParser.cs" />
+    <Compile Include="Generation\GherkinParsers\IExcelFeatureParser.cs" />
+    <Compile Include="Generation\GherkinParsers\IFeatureParser.cs" />
+    <Compile Include="Generation\EclipticProperties.cs" />
+    <Compile Include="Generation\EclipticPostProcessor.cs" />
+    <Compile Include="Generation\IMd5HashProcessor.cs" />
+    <Compile Include="Generation\Md5HashProcessor.cs" />
+    <Compile Include="Generation\NullHashProcessor.cs" />
+    <Compile Include="Generation\Tasks\AddMissingFeatureClassesToProject.cs" />
+    <Compile Include="Generation\Tasks\AddMissingFeatureFilesToProject.cs" />
+    <Compile Include="Generation\Tasks\AddMissingSpreadsheetFilesToProject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Generation\Domain\Scenario.cs" />
+    <Compile Include="Generation\GherkinParsers\SetupFeatureParser.cs" />
+    <Compile Include="Generation\Tasks\AddFeatureClassesToProject.cs" />
+    <Compile Include="Generation\Tasks\AddGeneratedFeatureFilesToProject.cs" />
+    <Compile Include="Generation\Tasks\AddOriginalMsbuildImportsToProject.cs" />
+    <Compile Include="Generation\Tasks\RemoveAndCacheUnsupportedMsBuildTargetsBeforeSpecflowGeneration.cs" />
+    <Compile Include="Generation\Tasks\EclipticTask.cs" />
+    <Compile Include="Generation\Tasks\RegenerateFeatureClasses.cs" />
+    <Compile Include="Generation\Tasks\RemoveFeatureClassesFromProject.cs" />
+    <Compile Include="Generation\Tasks\RemoveFeatureFilesFromProject.cs" />
+    <Compile Include="Generation\Tasks\RemoveSpreadsheetsFromProject.cs" />
+    <Compile Include="Utility\Arguments.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Content Include="GenerateSpecflow.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>System.__ComObject</id>
+    <version>0.1.1</version>
+    <title>System.__ComObject title here</title>
+    <description>System.__ComObject description here</description>
+    <summary>System.__ComObject 0.1.1 Developer Build</summary>
+    <tags>System.__ComObject</tags>
+    <authors>auth</authors>
+    <owners>owner</owners>
+    <projectUrl>http://System.__ComObject.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2015 System.__ComObject.</copyright>
+  </metadata>
+  <files>
+    <file src="..\build-artifacts\output\_PublishedWebsites\System.__ComObject\**\*.*" target="website" exclude="..\build-artifacts\output\_PublishedWebsites\System.__ComObject\**\*.pdb" />
+    <file src="..\build\deploy.ps1" target="deploy.ps1" />
+    <file src="..\build\environments\**\*.*" target="environments" />
+    <file src="..\packages\poshBAR.*\tools\modules\**\*.*" target="modules" />
+  </files>
+</package>

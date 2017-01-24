@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ShoppingCart</id>
+    <version>0.1.1</version>
+    <title>ShoppingCart title here</title>
+    <description>ShoppingCart description here</description>
+    <summary>ShoppingCart 0.1.1 Developer Build</summary>
+    <tags>ShoppingCart</tags>
+    <authors>auth</authors>
+    <owners>owner</owners>
+    <projectUrl>http://ShoppingCart.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2015 ShoppingCart.</copyright>
+  </metadata>
+  <files>
+    <file src="..\build-artifacts\output\_PublishedWebsites\ShoppingCart\**\*.*" target="website" exclude="..\build-artifacts\output\_PublishedWebsites\ShoppingCart\**\*.pdb" />
+    <file src="..\build\deploy.ps1" target="deploy.ps1" />
+    <file src="..\build\environments\**\*.*" target="environments" />
+    <file src="..\packages\poshBAR.*\tools\modules\**\*.*" target="modules" />
+  </files>
+<<<<<<< HEAD
+</package>
+=======
+</package>
+>>>>>>> 58b66f82c692695cb2906e7540bfd29dbce52fc5

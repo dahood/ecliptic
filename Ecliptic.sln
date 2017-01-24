@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EclipticLib", "src\EclipticLib\EclipticLib.csproj", "{E7F4631C-3D21-40C1-A560-FD9652A42B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit.Test", "src\Unit.Test\Unit.Test.csproj", "{FFEE5842-F685-4E93-B334-2B3A385A6D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EclipticCLI", "src\EclipticCLI\EclipticCLI.csproj", "{835609D9-0ECC-4AFE-8C18-B3C7D16B92D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2EF5BEC9-8B21-4824-83B5-3E7E9A935CA0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{5714BCBA-8512-41BA-82F5-ACCDD26F6044}"
+	ProjectSection(SolutionItems) = preProject
+		build\ecliptic.nuspec = build\ecliptic.nuspec
+		build\project.ps1 = build\project.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{C07466AC-2400-47BD-A362-29084E27FB6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{547B1431-9ACF-4034-B106-7D0308D3A94F}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7F4631C-3D21-40C1-A560-FD9652A42B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F4631C-3D21-40C1-A560-FD9652A42B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F4631C-3D21-40C1-A560-FD9652A42B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F4631C-3D21-40C1-A560-FD9652A42B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEE5842-F685-4E93-B334-2B3A385A6D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEE5842-F685-4E93-B334-2B3A385A6D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEE5842-F685-4E93-B334-2B3A385A6D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835609D9-0ECC-4AFE-8C18-B3C7D16B92D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835609D9-0ECC-4AFE-8C18-B3C7D16B92D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835609D9-0ECC-4AFE-8C18-B3C7D16B92D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835609D9-0ECC-4AFE-8C18-B3C7D16B92D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C07466AC-2400-47BD-A362-29084E27FB6E} = {5714BCBA-8512-41BA-82F5-ACCDD26F6044}
+	EndGlobalSection
+EndGlobal

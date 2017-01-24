@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.2.1.0" clr-version="4.0.30319.42000" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.587895">
+  <command-line><![CDATA["C:\develop\ecliptic\SampleApps\DotNet\ShoppingCart\packages\NUnit.ConsoleRunner.3.2.1\tools\nunit3-console.exe" C:\develop\ecliptic\SampleApps\DotNet\ShoppingCart\build-artifacts\output\ShoppingCartApp.Tests.dll --out=C:\develop\ecliptic\SampleApps\DotNet\ShoppingCart\build-artifacts\results\ShoppingCart-Tests-Unit-TestResults.xml]]></command-line>
+  <test-suite type="Assembly" id="0-1010" name="ShoppingCartApp.Tests.dll" fullname="C:\develop\ecliptic\SampleApps\DotNet\ShoppingCart\build-artifacts\output\ShoppingCartApp.Tests.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.530122" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.2.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.14393.0" platform="Win32NT" cwd="C:\develop\ecliptic\SampleApps\DotNet\ShoppingCart\build" machine-name="DESKTOP-EHE3T36" user="greg" user-domain="DESKTOP-EHE3T36" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="WorkDirectory" value="C:\develop\ecliptic\SampleApps\DotNet\ShoppingCart\build" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.5.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="14132" />
+      <property name="_APPDOMAIN" value="test-domain-" />
+    </properties>
+    <test-suite type="TestSuite" id="0-1011" name="ShoppingCartApp" fullname="ShoppingCartApp" runstate="Runnable" testcasecount="6" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.523962" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="0-1012" name="Tests" fullname="ShoppingCartApp.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.523899" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestSuite" id="0-1013" name="Epics" fullname="ShoppingCartApp.Tests.Epics" runstate="Runnable" testcasecount="2" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.519438" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestSuite" id="0-1014" name="Features" fullname="ShoppingCartApp.Tests.Epics.Features" runstate="Runnable" testcasecount="2" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.519426" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="0-1000" name="ShoppingCartFeatureFeature" fullname="ShoppingCartApp.Tests.Epics.Features.ShoppingCartFeatureFeature" classname="ShoppingCartApp.Tests.Epics.Features.ShoppingCartFeatureFeature" runstate="Runnable" testcasecount="2" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.518152" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties>
+                <property name="Description" value="ShoppingCartFeature" />
+              </properties>
+              <test-case id="0-1002" name="SimpleCheckoutMultipleItems" fullname="ShoppingCartApp.Tests.Epics.Features.ShoppingCartFeatureFeature.SimpleCheckoutMultipleItems" methodname="SimpleCheckoutMultipleItems" classname="ShoppingCartApp.Tests.Epics.Features.ShoppingCartFeatureFeature" runstate="Runnable" seed="1630670862" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.210508" asserts="0">
+                <properties>
+                  <property name="Description" value="Simple Checkout Multiple Items" />
+                </properties>
+                <output><![CDATA[Given I start with an Empty Shopping Cart
+-> done: ShoppingCartSteps.GivenIStartWithAnEmptyShoppingCart() (0.0s)
+And I have the following Products to sell
+  --- table step argument ---
+  | SKU | Name | Unit Price |
+  | 001 | Milk | 2.50       |
+  | 002 | Eggs | 3.50       |
+-> done: ShoppingCartSteps.GivenIHaveTheFollowingProductsToSell(<table>) (0.0s)
+And I add Milk to the Shopping Cart
+-> done: ShoppingCartSteps.GivenIAddProductToTheShoppingCart("Milk") (0.0s)
+And I add Eggs to the Shopping Cart
+-> done: ShoppingCartSteps.GivenIAddProductToTheShoppingCart("Eggs") (0.0s)
+When I go to checkout
+-> done: ShoppingCartSteps.WhenIGoToCheckout() (0.0s)
+Then I should have the following in the shopping Cart
+  --- table step argument ---
+  | SKU | Item | Price |
+  | 001 | Milk | 2.50  |
+  | 002 | Eggs | 3.50  |
+-> done: ShoppingCartSteps.ThenIShouldHaveTheFollowingInTheShoppingCart(<table>) (0.0s)
+And my total should be 6.00
+-> done: ShoppingCartSteps.ThenMyTotalShouldBe(6.00) (0.0s)
+]]></output>
+              </test-case>
+              <test-case id="0-1001" name="SimpleCheckoutOneItem" fullname="ShoppingCartApp.Tests.Epics.Features.ShoppingCartFeatureFeature.SimpleCheckoutOneItem" methodname="SimpleCheckoutOneItem" classname="ShoppingCartApp.Tests.Epics.Features.ShoppingCartFeatureFeature" runstate="Runnable" seed="798259755" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.000974" asserts="0">
+                <properties>
+                  <property name="Description" value="Simple Checkout One Item" />
+                </properties>
+                <output><![CDATA[Given I start with an Empty Shopping Cart
+-> done: ShoppingCartSteps.GivenIStartWithAnEmptyShoppingCart() (0.0s)
+And I have the following Products to sell
+  --- table step argument ---
+  | SKU | Name | Unit Price |
+  | 001 | Milk | 2.5        |
+  | 002 | Eggs | 3.50       |
+-> done: ShoppingCartSteps.GivenIHaveTheFollowingProductsToSell(<table>) (0.0s)
+And I add Milk to the Shopping Cart
+-> done: ShoppingCartSteps.GivenIAddProductToTheShoppingCart("Milk") (0.0s)
+When I go to checkout
+-> done: ShoppingCartSteps.WhenIGoToCheckout() (0.0s)
+Then I should have the following in the shopping Cart
+  --- table step argument ---
+  | SKU | Item | Price |
+  | 001 | Milk | 2.50  |
+-> done: ShoppingCartSteps.ThenIShouldHaveTheFollowingInTheShoppingCart(<table>) (0.0s)
+And my total should be 2.50
+-> done: ShoppingCartSteps.ThenMyTotalShouldBe(2.50) (0.0s)
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="0-1017" name="Specflow_Generated" fullname="ShoppingCartApp.Tests.Specflow_Generated" runstate="Runnable" testcasecount="2" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.520913" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="0-1007" name="ShoppingCartFeatureFeature" fullname="ShoppingCartApp.Tests.Specflow_Generated.ShoppingCartFeatureFeature" classname="ShoppingCartApp.Tests.Specflow_Generated.ShoppingCartFeatureFeature" runstate="Runnable" testcasecount="2" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.002388" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties>
+              <property name="Description" value="ShoppingCartFeature" />
+            </properties>
+            <test-case id="0-1009" name="SimpleCheckoutMultipleItems" fullname="ShoppingCartApp.Tests.Specflow_Generated.ShoppingCartFeatureFeature.SimpleCheckoutMultipleItems" methodname="SimpleCheckoutMultipleItems" classname="ShoppingCartApp.Tests.Specflow_Generated.ShoppingCartFeatureFeature" runstate="Runnable" seed="212386315" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.001176" asserts="0">
+              <properties>
+                <property name="Description" value="Simple Checkout Multiple Items" />
+              </properties>
+              <output><![CDATA[Given I start with an Empty Shopping Cart
+-> done: ShoppingCartSteps.GivenIStartWithAnEmptyShoppingCart() (0.0s)
+And I have the following Products to sell
+  --- table step argument ---
+  | SKU | Name | Unit Price |
+  | 001 | Milk | 2.50       |
+  | 002 | Eggs | 3.50       |
+-> done: ShoppingCartSteps.GivenIHaveTheFollowingProductsToSell(<table>) (0.0s)
+And I add Milk to the Shopping Cart
+-> done: ShoppingCartSteps.GivenIAddProductToTheShoppingCart("Milk") (0.0s)
+And I add Eggs to the Shopping Cart
+-> done: ShoppingCartSteps.GivenIAddProductToTheShoppingCart("Eggs") (0.0s)
+When I go to checkout
+-> done: ShoppingCartSteps.WhenIGoToCheckout() (0.0s)
+Then I should have the following in the shopping Cart
+  --- table step argument ---
+  | SKU | Item | Price |
+  | 001 | Milk | 2.50  |
+  | 002 | Eggs | 3.50  |
+-> done: ShoppingCartSteps.ThenIShouldHaveTheFollowingInTheShoppingCart(<table>) (0.0s)
+And my total should be 6.00
+-> done: ShoppingCartSteps.ThenMyTotalShouldBe(6.00) (0.0s)
+]]></output>
+            </test-case>
+            <test-case id="0-1008" name="SimpleCheckoutOneItem" fullname="ShoppingCartApp.Tests.Specflow_Generated.ShoppingCartFeatureFeature.SimpleCheckoutOneItem" methodname="SimpleCheckoutOneItem" classname="ShoppingCartApp.Tests.Specflow_Generated.ShoppingCartFeatureFeature" runstate="Runnable" seed="1553621128" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.000750" asserts="0">
+              <properties>
+                <property name="Description" value="Simple Checkout One Item" />
+              </properties>
+              <output><![CDATA[Given I start with an Empty Shopping Cart
+-> done: ShoppingCartSteps.GivenIStartWithAnEmptyShoppingCart() (0.0s)
+And I have the following Products to sell
+  --- table step argument ---
+  | SKU | Name | Unit Price |
+  | 001 | Milk | 2.5        |
+  | 002 | Eggs | 3.50       |
+-> done: ShoppingCartSteps.GivenIHaveTheFollowingProductsToSell(<table>) (0.0s)
+And I add Milk to the Shopping Cart
+-> done: ShoppingCartSteps.GivenIAddProductToTheShoppingCart("Milk") (0.0s)
+When I go to checkout
+-> done: ShoppingCartSteps.WhenIGoToCheckout() (0.0s)
+Then I should have the following in the shopping Cart
+  --- table step argument ---
+  | SKU | Item | Price |
+  | 001 | Milk | 2.50  |
+-> done: ShoppingCartSteps.ThenIShouldHaveTheFollowingInTheShoppingCart(<table>) (0.0s)
+And my total should be 2.50
+-> done: ShoppingCartSteps.ThenMyTotalShouldBe(2.50) (0.0s)
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="0-1015" name="Unit" fullname="ShoppingCartApp.Tests.Unit" runstate="Runnable" testcasecount="2" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.522957" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestSuite" id="0-1016" name="Domain" fullname="ShoppingCartApp.Tests.Unit.Domain" runstate="Runnable" testcasecount="1" result="Passed" start-time="2017-01-24 15:40:20Z" end-time="2017-01-24 15:40:21Z" duration="0.521797" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="0-1005" name="ShoppingCartTest" fullname="ShoppingCartApp.Tests.Unit.Domain.ShoppingCartTest" classname="ShoppingCartApp.Tests.Unit.Domain.ShoppingCartTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.000893" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <test-case id="0-1006" name="AddItemToCart" fullname="ShoppingCartApp.Tests.Unit.Domain.ShoppingCartTest.AddItemToCart" methodname="AddItemToCart" classname="ShoppingCartApp.Tests.Unit.Domain.ShoppingCartTest" runstate="Runnable" seed="2113917196" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.000767" asserts="0" />
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="0-1003" name="SampleUnitTest" fullname="ShoppingCartApp.Tests.Unit.SampleUnitTest" classname="ShoppingCartApp.Tests.Unit.SampleUnitTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.001152" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-case id="0-1004" name="SampleTest" fullname="ShoppingCartApp.Tests.Unit.SampleUnitTest.SampleTest" methodname="SampleTest" classname="ShoppingCartApp.Tests.Unit.SampleUnitTest" runstate="Runnable" seed="17143493" result="Passed" start-time="2017-01-24 15:40:21Z" end-time="2017-01-24 15:40:21Z" duration="0.001042" asserts="0" />
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

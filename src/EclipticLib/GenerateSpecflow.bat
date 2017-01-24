@@ -1,0 +1,1 @@
+.\specflow.exe generateall %1 /force
