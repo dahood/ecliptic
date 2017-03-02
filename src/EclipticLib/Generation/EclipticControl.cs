@@ -5,6 +5,7 @@ using System.Linq;
 using EclipticLib.Extensions;
 using EclipticLib.Generation.Domain;
 using EclipticLib.Generation.GherkinParsers;
+using EclipticLib.Utility.Logging;
 
 namespace EclipticLib.Generation
 {
@@ -34,9 +35,12 @@ namespace EclipticLib.Generation
             {
                 Console.WriteLine("Parsing:  " + each);
                 var directory = Path.GetDirectoryName(each);
+                Log.Debug(x => x($"working in directory: {directory}"));
                 var feature = featureParser.Parse(each);
                 md5HashProcessor.UpdateHash(each, feature);
                 var saveToDirectory = directory.Replace(eclipticProperties.SpreadsheetFolder, eclipticProperties.FeatureFileFolder);
+
+                Log.Debug(x => x($"saving to directory: {saveToDirectory}"));
                 featureFilesGenerated.Add(new TranslatedItem(each, SaveTo(feature, saveToDirectory)));
             });
 

@@ -3,6 +3,7 @@ using System.IO;
 using EclipticLib;
 using EclipticLib.Extensions;
 using EclipticLib.Generation;
+using EclipticLib.Utility.Logging;
 
 namespace EclipticCLI
 {
@@ -15,8 +16,12 @@ namespace EclipticCLI
                 ValidateCommandLineArguments(args);
 
                 var acceptanceTestDirectory = args[0];
+                Log.Debug(x => x($"working on {acceptanceTestDirectory}"));
+
                 AssertAcceptanceTestDirectoryExists(acceptanceTestDirectory);
                 var properitesFilePath = acceptanceTestDirectory.LocateFile(Constants.EclipticProperties);
+                Log.Debug(x => x($"property {properitesFilePath} found"));
+
                 Environment.CurrentDirectory = properitesFilePath.DirectoryName;
                 var properties = new EclipticProperties(properitesFilePath.FullName);
 
