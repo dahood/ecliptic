@@ -33,9 +33,9 @@ namespace EclipticLib.Generation
             var featureFilesGenerated = new List<TranslatedItem>();
             LocateAllSpreadsheets(eclipticProperties.SpreadsheetFolder).ForEach(each =>
             {
-                Console.WriteLine("Parsing:  " + each);
                 var directory = Path.GetDirectoryName(each);
                 Log.Debug(x => x($"working in directory: {directory}"));
+
                 var feature = featureParser.Parse(each);
                 md5HashProcessor.UpdateHash(each, feature);
                 var saveToDirectory = directory.Replace(eclipticProperties.SpreadsheetFolder, eclipticProperties.FeatureFileFolder);
